@@ -1,0 +1,87 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="75" height="75">
+    <!-- Borders -->
+    <rect width="58" height="58" x="8.3" y="8.3" fill="#000000"></rect>
+    
+    <!-- Top Left -->
+    <rect width="13.1" height="13.1" x="9.3" y="9.3" rx="0" ry="0" fill="#ffc107"></rect>
+    <rect width="13.1" height="13.1" x="9.3" y="13.6" rx="0" ry="0" fill="#ffc107"></rect>
+    <rect width="13.1" height="13.1" x="13.6" y="9.3" rx="0" ry="0" fill="#ffc107"></rect>
+    <rect width="13.1" height="13.1" x="13.6" y="13.6" rx="1" ry="1" fill="#ffc107"></rect>
+    
+    <!-- Middle Left -->
+    <rect width="13.1" height="13.1" x="9.3" y="28.75" rx="0" ry="0" fill="#888888"></rect>
+    <rect width="13.1" height="13.1" x="9.3" y="33.1" rx="0" ry="0" fill="#888888"></rect>
+    <rect width="13.1" height="13.1" x="13.6" y="28.75" rx="4.3" ry="4.3" fill="#888888"></rect>
+    <rect width="13.1" height="13.1" x="13.6" y="33.1" rx="4.3" ry="4.3" fill="#888888"></rect>
+    
+    <!-- Down Left -->
+    <rect width="13.1" height="13.1" x="9.3" y="48.1" rx="0" ry="0" fill="#888888"></rect>
+    <rect width="13.1" height="13.1" x="9.3" y="52.5" rx="0" ry="0" fill="#888888"></rect>
+    <rect width="13.1" height="13.1" x="13.6" y="48.1" rx="4.3" ry="4.3" fill="#888888"></rect>
+    <rect width="13.1" height="13.1" x="13.6" y="52.5" rx="0" ry="0" fill="#888888"></rect>
+    
+    <!-- Top Middle -->
+    <rect width="13.1" height="13.1" x="28.75" y="9.3" rx="0" ry="0" fill="#888888"></rect>
+    <rect width="13.1" height="13.1" x="28.75" y="13.6" rx="4.3" ry="4.3" fill="#888888"></rect>
+    <rect width="13.1" height="13.1" x="33.1" y="9.3" rx="0" ry="0" fill="#888888"></rect>
+    <rect width="13.1" height="13.1" x="33.1" y="13.6" rx="4.3" ry="4.3" fill="#888888"></rect>
+    
+    <!-- Center -->
+    <rect width="13.1" height="13.1" x="28.75" y="28.75" rx="4.3" ry="4.3" fill="#ffc107"></rect>
+    <rect width="13.1" height="13.1" x="28.75" y="33.1" rx="4.3" ry="4.3" fill="#ffc107"></rect>
+    <rect width="13.1" height="13.1" x="33.1" y="28.75" rx="4.3" ry="4.3" fill="#ffc107"></rect>
+    <rect width="13.1" height="13.1" x="33.1" y="33.1" rx="4.3" ry="4.3" fill="#ffc107"></rect>
+    
+    <!-- Down middle -->
+    <rect width="13.1" height="13.1" x="28.75" y="48.1" rx="4.3" ry="4.3" fill="#888888"></rect>
+    <rect width="13.1" height="13.1" x="28.75" y="52.5" rx="0" ry="0" fill="#888888"></rect>
+    <rect width="13.1" height="13.1" x="33.1" y="48.1" rx="4.3" ry="4.3" fill="#888888"></rect>
+    <rect width="13.1" height="13.1" x="33.1" y="52.5" rx="0" ry="0" fill="#888888"></rect>
+    
+    <!-- Top right -->
+    <rect width="13.1" height="13.1" x="48.1" y="9.3" rx="0" ry="0" fill="#ffc107"></rect>
+    <rect width="13.1" height="13.1" x="48.1" y="13.6" rx="1" ry="1" fill="#ffc107"></rect>
+    <rect width="13.1" height="13.1" x="52.5" y="9.3" rx="1" ry="1" fill="#ffc107"></rect>
+    <rect width="13.1" height="13.1" x="52.5" y="13.6" rx="0" ry="0" fill="#ffc107"></rect>
+    
+    <!-- Middle right -->
+    <rect width="13.1" height="13.1" x="48.1" y="28.75" rx="4.3" ry="4.3" fill="#888888"></rect>
+    <rect width="13.1" height="13.1" x="48.1" y="33.1" rx="4.3" ry="4.3" fill="#888888"></rect>
+    <rect width="13.1" height="13.1" x="52.5" y="28.75" rx="1" ry="1" fill="#888888"></rect>
+    <rect width="13.1" height="13.1" x="52.5" y="33.1" rx="0" ry="0" fill="#888888"></rect>
+    
+    <!-- Down right -->
+    <rect width="13.1" height="13.1" x="48.1" y="48.1" rx="1" ry="1" fill="#888888"></rect>
+    <rect width="13.1" height="13.1" x="48.1" y="52.5" rx="0" ry="0" fill="#888888"></rect>
+    <rect width="13.1" height="13.1" x="52.5" y="48.1" rx="1" ry="1" fill="#888888"></rect>
+    <rect width="13.1" height="13.1" x="52.5" y="52.5" rx="0" ry="0" fill="#888888"></rect>
+    
+    <!-- Border -->
+    <rect width="58" height="8.3" x="8.3" y="0" fill="#000000"></rect>
+    <rect width="58" height="8.3" x="8.3" y="66.6" fill="#000000"></rect>
+    <rect width="8.3" height="58" x="0" y="8.3" fill="#000000"></rect>
+    <rect width="8.3" height="58" x="66" y="8.3" fill="#000000"></rect>
+
+    <!-- Sides -->  
+
+    <!-- right part side cube -->
+    <rect width="6.3" height="17.5" x="67.6" y="9.3" rx="1" ry="1" fill="#888888"></rect>
+    <rect width="6.3" height="17.5" x="67.6" y="28.75" rx="1" ry="1" fill="#ffc107"></rect>
+    <rect width="6.3" height="17.5" x="67.6" y="48.1" rx="1" ry="1" fill="#ffc107"></rect>
+    
+    <!-- top part side cube -->
+    <rect width="17.5" height="6.3" x="9.3" y="0.9" rx="1" ry="1" fill="#888888"></rect>
+    <rect width="17.5" height="6.3" x="28.75" y="0.9" rx="1" ry="1" fill="#ffc107"></rect>
+    <rect width="17.5" height="6.3" x="48.1" y="0.9" rx="1" ry="1" fill="#888888"></rect>
+    
+    <!-- bottom part side cube -->
+    <rect width="17.5" height="6.3" x="9.3" y="67.6" rx="1" ry="1" fill="#888888"></rect>
+    <rect width="17.5" height="6.3" x="28.75" y="67.6" rx="1" ry="1" fill="#ffc107"></rect>
+    <rect width="17.5" height="6.3" x="48.1" y="67.6" rx="1" ry="1" fill="#888888"></rect>
+    
+    <!-- left part side cube -->
+    <rect width="6.3" height="17.5" x="0.9" y="9.3" rx="1" ry="1" fill="#888888"></rect>
+    <rect width="6.3" height="17.5" x="0.9" y="28.75" rx="1" ry="1" fill="#ffc107"></rect>
+    <rect width="6.3" height="17.5" x="0.9" y="48.1" rx="1" ry="1" fill="#ffc107"></rect>
+</svg>

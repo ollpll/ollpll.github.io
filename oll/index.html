@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <script src="../script/olls_list.js" defer></script>
+        <script src="../script/oll.js" defer></script>
+        <script src="../script/loadhandler.js" defer></script>
+        <title>Rubiks Trainer</title>
+    </head>
+
+    <body>
+        <div id="loader" class="loader">
+            <div id="masterloader">
+                <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-loader-circle-icon lucide-loader-circle"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg></div>
+                <div><span class="smallspan">Loading Style</span></div>
+            </div>
+        </div>
+        <div id="notif" style="position: fixed; top: 20px; right: 20px; z-index: 2;"></div>
+        
+        <div class="mainoll" id="mainoll">
+            <span class="centeredspan" id="centeredspan" onclick="selectAll()">0 out 57</span>
+
+            <div class="Dot">
+                <span class="casespan" onclick="selectGroup('Dot')">Dot</span>
+                <img src="../olls_svg/Dot/Dot_1.svg" onclick="selectOll('Dot_1')">
+                <img src="../olls_svg/Dot/Dot_2.svg" onclick="selectOll('Dot_2')">
+                <img src="../olls_svg/Dot/Dot_3.svg" onclick="selectOll('Dot_3')">
+                <img src="../olls_svg/Dot/Dot_4.svg" onclick="selectOll('Dot_4')">
+                <img src="../olls_svg/Dot/Dot_5.svg" onclick="selectOll('Dot_5')">
+                <img src="../olls_svg/Dot/Dot_6.svg" onclick="selectOll('Dot_6')">
+                <img src="../olls_svg/Dot/Dot_7.svg" onclick="selectOll('Dot_7')">
+                <img src="../olls_svg/Dot/Dot_8.svg" onclick="selectOll('Dot_8')">
+            </div>
+
+            <div class="Cross">
+                <span class="casespan" onclick="selectGroup('Cross')">Cross</span>
+                <img src="../olls_svg/Cross/Cross_1.svg" onclick="selectOll('Cross_1')">
+                <img src="../olls_svg/Cross/Cross_2.svg" onclick="selectOll('Cross_2')">
+                <img src="../olls_svg/Cross/Cross_3.svg" onclick="selectOll('Cross_3')">
+                <img src="../olls_svg/Cross/Cross_4.svg" onclick="selectOll('Cross_4')">
+                <img src="../olls_svg/Cross/Cross_5.svg" onclick="selectOll('Cross_5')">
+                <img src="../olls_svg/Cross/Cross_6.svg" onclick="selectOll('Cross_6')">
+                <img src="../olls_svg/Cross/Cross_7.svg" onclick="selectOll('Cross_7')">
+            </div>
+
+            <div class="Lightning-Bolt">
+                <span class="casespan" onclick="selectGroup('Lightning-Bolt')">Lightning Bolt</span>
+                <img src="../olls_svg/Lightning-Bolt/Lightning-Bolt_1.svg" onclick="selectOll('Lightning-Bolt_1')">
+                <img src="../olls_svg/Lightning-Bolt/Lightning-Bolt_2.svg" onclick="selectOll('Lightning-Bolt_2')">
+                <img src="../olls_svg/Lightning-Bolt/Lightning-Bolt_3.svg" onclick="selectOll('Lightning-Bolt_3')">
+                <img src="../olls_svg/Lightning-Bolt/Lightning-Bolt_4.svg" onclick="selectOll('Lightning-Bolt_4')">
+                <img src="../olls_svg/Lightning-Bolt/Lightning-Bolt_5.svg" onclick="selectOll('Lightning-Bolt_5')">
+                <img src="../olls_svg/Lightning-Bolt/Lightning-Bolt_6.svg" onclick="selectOll('Lightning-Bolt_6')">
+            </div>
+
+            <div class="L-Shape">
+                <span class="casespan" onclick="selectGroup('L-Shape')">L Shapes</span>
+                <img src="../olls_svg/L-Shape/L-Shape_1.svg" onclick="selectOll('L-Shape_1')">
+                <img src="../olls_svg/L-Shape/L-Shape_2.svg" onclick="selectOll('L-Shape_2')">
+                <img src="../olls_svg/L-Shape/L-Shape_3.svg" onclick="selectOll('L-Shape_3')">
+                <img src="../olls_svg/L-Shape/L-Shape_4.svg" onclick="selectOll('L-Shape_4')">
+                <img src="../olls_svg/L-Shape/L-Shape_5.svg" onclick="selectOll('L-Shape_5')">
+                <img src="../olls_svg/L-Shape/L-Shape_6.svg" onclick="selectOll('L-Shape_6')">
+            </div>
+
+            <div class="P-Shape">
+                <span class="casespan" onclick="selectGroup('P-Shape')">P Shapes</span>
+                <img src="../olls_svg/P-Shape/P-Shape_1.svg" onclick="selectOll('P-Shape_1')">
+                <img src="../olls_svg/P-Shape/P-Shape_2.svg" onclick="selectOll('P-Shape_2')">
+                <img src="../olls_svg/P-Shape/P-Shape_3.svg" onclick="selectOll('P-Shape_3')">
+                <img src="../olls_svg/P-Shape/P-Shape_4.svg" onclick="selectOll('P-Shape_4')">
+            </div>
+ 
+            <div class="Akward-Shape">
+                <span class="casespan" onclick="selectGroup('Akward-Shape')">Akward Shapes</span>
+                <img src="../olls_svg/Akward-Shape/Akward-Shape_1.svg" onclick="selectOll('Akward-Shape_1')">
+                <img src="../olls_svg/Akward-Shape/Akward-Shape_2.svg" onclick="selectOll('Akward-Shape_2')">
+                <img src="../olls_svg/Akward-Shape/Akward-Shape_3.svg" onclick="selectOll('Akward-Shape_3')">
+                <img src="../olls_svg/Akward-Shape/Akward-Shape_4.svg" onclick="selectOll('Akward-Shape_4')">
+            </div>
+
+            <div class="Knight-Shape">
+                <span class="casespan" onclick="selectGroup('Knight')">Knight Shapes</span>
+                <img src="../olls_svg/Knight/Knight_1.svg" onclick="selectOll('Knight_1')">
+                <img src="../olls_svg/Knight/Knight_2.svg" onclick="selectOll('Knight_2')">
+                <img src="../olls_svg/Knight/Knight_3.svg" onclick="selectOll('Knight_3')">
+                <img src="../olls_svg/Knight/Knight_4.svg" onclick="selectOll('Knight_4')">
+            </div>
+
+            <div class="Line">
+                <span class="casespan" onclick="selectGroup('Line')">Line</span>
+                <img src="../olls_svg/Line/Line_1.svg" onclick="selectOll('Line_1')">
+                <img src="../olls_svg/Line/Line_2.svg" onclick="selectOll('Line_2')">
+                <img src="../olls_svg/Line/Line_3.svg" onclick="selectOll('Line_3')">
+                <img src="../olls_svg/Line/Line_4.svg" onclick="selectOll('Line_4')">
+            </div>
+
+            <div class="Fish">
+                <span class="casespan" onclick="selectGroup('Fish')">Fish</span>
+                <img src="../olls_svg/Fish/Fish_1.svg" onclick="selectOll('Fish_1')">
+                <img src="../olls_svg/Fish/Fish_2.svg" onclick="selectOll('Fish_2')">
+                <img src="../olls_svg/Fish/Fish_3.svg" onclick="selectOll('Fish_3')">
+                <img src="../olls_svg/Fish/Fish_4.svg" onclick="selectOll('Fish_4')">
+            </div>
+
+            <div class="T-Shape">
+                <span class="casespan" onclick="selectGroup('T-Shape')">T Shapes</span>
+                <img src="../olls_svg/T-Shape/T-Shape_1.svg" onclick="selectOll('T-Shape_1')">
+                <img src="../olls_svg/T-Shape/T-Shape_2.svg" onclick="selectOll('T-Shape_2')">
+            </div>
+
+            <div class="C-Shape">
+                <span class="casespan" onclick="selectGroup('C-Shape')">C Shapes</span>
+                <img src="../olls_svg/C-Shape/C-Shape_1.svg" onclick="selectOll('C-Shape_1')">
+                <img src="../olls_svg/C-Shape/C-Shape_2.svg" onclick="selectOll('C-Shape_2')">
+            </div>
+
+            <div class="Square">
+                <span class="casespan" onclick="selectGroup('Square')">Square</span>
+                <img src="../olls_svg/Square/Square_1.svg" onclick="selectOll('Square_1')">
+                <img src="../olls_svg/Square/Square_2.svg" onclick="selectOll('Square_2')">
+            </div>
+
+            <div class="Stair">
+                <span class="casespan" onclick="selectGroup('Stair')">Stair</span>
+                <img src="../olls_svg/Stair/Stair_1.svg" onclick="selectOll('Stair_1')">
+                <img src="../olls_svg/Stair/Stair_2.svg" onclick="selectOll('Stair_2')">
+            </div>
+
+            <div class="OC">
+                <span class="casespan" onclick="selectGroup('Oriented-Corner')">Oriented Corners</span>
+                <img src="../olls_svg/Oriented-Corner/Oriented-Corner_1.svg" onclick="selectOll('Oriented-Corner_1')">
+                <img src="../olls_svg/Oriented-Corner/Oriented-Corner_2.svg" onclick="selectOll('Oriented-Corner_2')">
+            </div>
+        </div>
+        <button class="training" onclick="switch_page()">Start Training</button>
+
+        <div class="maintimer" style="display: none;">
+            <span class="scramblespan">Scramble: </span>
+            <div class="time">
+                <span id="timer">00:00:00</span>
+                <span class="tipspan">(Hold Space to start)</span>
+            </div>
+        </div>
+    </body> 
+</html>
