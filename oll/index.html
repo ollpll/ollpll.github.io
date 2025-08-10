@@ -4,9 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../style.css">
-        <script src="../script/olls_list.js" defer></script>
+        <script src="../script/list.js" defer></script>
         <script src="../script/oll.js" defer></script>
         <script src="../script/loadhandler.js" defer></script>
+        <script defer>
+            let dataselect = "selectedItems"
+        </script>
+        <script src="../script/timer.js" defer></script>
         <title>Rubiks Trainer</title>
     </head>
 
@@ -138,7 +142,10 @@
         <button class="training" onclick="switch_page()">Start Training</button>
 
         <div class="maintimer" style="display: none;">
-            <span class="scramblespan">Scramble: </span>
+            <div class="timerarrange">
+                <span class="scramblespan">Scramble: </span>
+                <div><svg onclick="revert_page()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-undo2-icon lucide-undo-2"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"/></svg></div>
+            </div>
             <div class="time">
                 <span id="timer">00:00:00</span>
                 <span class="tipspan">(Hold Space to start)</span>

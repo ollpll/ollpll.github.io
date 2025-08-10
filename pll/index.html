@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <script src="../script/list.js" defer></script>
+        <script src="../script/pll.js" defer></script>
+        <script src="../script/loadhandler.js" defer></script>
+        <script defer>
+            let dataselect = "selectedPll"
+        </script>
+        <script src="../script/timer.js" defer></script>
+        <title>Rubiks Trainer</title>
+    </head>
+
+    <body>
+        <div id="loader" class="loader">
+            <div id="masterloader">
+                <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-loader-circle-icon lucide-loader-circle"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg></div>
+                <div><span class="smallspan">Loading Style</span></div>
+            </div>
+        </div>
+        <div id="notif" style="position: fixed; top: 20px; right: 20px; z-index: 2;"></div>
+        
+        <div class="mainoll" id="mainoll">
+            <span class="centeredspan" id="centeredspan" onclick="selectAll()">0 out 21</span>
+            <div class="Acs">
+                <span class="casespan" onclick="selectGroup('Acs')">Adjacent Corner Swap</span>
+
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('Aa')">Aa</span>
+                    <img src="../plls_svg/Acs/Aa.svg" onclick="selectPll('Aa')">
+                </div>
+
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('Ab')">Ab</span>
+                    <img src="../plls_svg/Acs/Ab.svg" onclick="selectPll('Ab')">
+                </div>
+
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('F')">F</span>
+                    <img src="../plls_svg/Acs/F.svg" onclick="selectPll('F')">
+                </div>
+
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('Ga')">Ga</span>
+                    <img src="../plls_svg/Acs/Ga.svg" onclick="selectPll('Ga')">
+                </div>
+
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('Gb')">Gb</span>
+                    <img src="../plls_svg/Acs/Gb.svg" onclick="selectPll('Gb')">
+                </div>
+
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('Gc')">Gc</span>
+                    <img src="../plls_svg/Acs/Gc.svg" onclick="selectPll('Gc')">
+                </div>
+
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('Gd')">Gd</span>
+                    <img src="../plls_svg/Acs/Gd.svg" onclick="selectPll('Gd')">
+                </div>
+
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('Ja')">Ja</span>
+                    <img src="../plls_svg/Acs/Ja.svg" onclick="selectPll('Ja')">
+                </div>
+
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('Jb')">Jb</span>
+                    <img src="../plls_svg/Acs/Jb.svg" onclick="selectPll('Jb')">
+                </div>
+
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('Ra')">Ra</span>
+                    <img src="../plls_svg/Acs/Ra.svg" onclick="selectPll('Ra')">
+                </div>
+
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('Rb')">Rb</span>
+                    <img src="../plls_svg/Acs/Rb.svg" onclick="selectPll('Rb')">
+                </div>
+
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('T')">T</span>
+                    <img src="../plls_svg/Acs/T.svg" onclick="selectPll('T')">
+                </div>
+            </div>
+
+            <div class="Dcs">
+                <span class="casespan" onclick="selectGroup('Dcs')">Diagonal Corner Swap</span>
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('E')">E</span>
+                    <img src="../plls_svg/Dcs/E.svg" onclick="selectPll('E')">
+                </div>
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('Na')">Na</span>
+                    <img src="../plls_svg/Dcs/Na.svg" onclick="selectPll('Na')">
+                </div>
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('Nb')">Nb</span>
+                    <img src="../plls_svg/Dcs/Nb.svg" onclick="selectPll('Nb')">
+                </div>
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('V')">V</span>
+                    <img src="../plls_svg/Dcs/V.svg" onclick="selectPll('V')">
+                </div>
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('Y')">Y</span>
+                    <img src="../plls_svg/Dcs/Y.svg" onclick="selectPll('Y')">
+                </div>
+            </div>
+
+            <div class="Eo">
+                <span class="casespan" onclick="selectGroup('Eo')">Edges Only</span>
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('H')">H</span>
+                    <img src="../plls_svg/Eo/H.svg" onclick="selectPll('H')">
+                </div>
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('Ua')">Ua</span>
+                    <img src="../plls_svg/Eo/Ua.svg" onclick="selectPll('Ua')">
+                </div>
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('Ub')">Ub</span>
+                    <img src="../plls_svg/Eo/Ub.svg" onclick="selectPll('Ub')">
+                </div>
+                <div class="case-cont">
+                    <span class="spancase" onclick="selectPll('Z')">Z</span>
+                    <img src="../plls_svg/Eo/Z.svg" onclick="selectPll('Z')">
+                </div>
+            </div>
+        </div>
+        <button class="training" onclick="switch_page()">Start Training</button>
+
+        <div class="maintimer" style="display: none;">
+            <div class="timerarrange">
+                <span class="scramblespan">Scramble: </span>
+                <div><svg onclick="revert_page()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-undo2-icon lucide-undo-2"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"/></svg></div>
+            </div>
+            <div class="time">
+                <span id="timer">00:00:00</span>
+                <span class="tipspan">(Hold Space to start)</span>
+            </div>
+        </div>
+    </body> 
+</html>

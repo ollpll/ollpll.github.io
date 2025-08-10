@@ -3,43 +3,43 @@ const SelectSpan = document.getElementById("centeredspan")
 let selectedCount = 0
 
 window.addEventListener('load', () => {
-    const selectedItems = JSON.parse(localStorage.getItem('selectedItems')) || []
-    selectedItems.forEach(id => {
+    const selectedPll = JSON.parse(localStorage.getItem('selectedPll')) || []
+    selectedPll.forEach(id => {
         const img = document.querySelector(`img[src$="${id}.svg"]`)
         if (img) {
             img.classList.add("selected")
             selectedCount++
         }
     })
-    SelectSpan.textContent = selectedCount + " out 57"
+    SelectSpan.textContent = selectedCount + " out 21"
 })
 
 async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms))
 }
 
-function selectOll(id) {
+function selectPll(id) {
     const img = document.querySelector(`img[src$="${id}.svg"]`)
-    let selectedItems = JSON.parse(localStorage.getItem('selectedItems')) || []
+    let selectedPll = JSON.parse(localStorage.getItem('selectedPll')) || []
 
     if (img.classList.contains("selected")) {
         img.classList.remove("selected")
         selectedCount--
-        selectedItems = selectedItems.filter(item => item !== id)
+        selectedPll = selectedPll.filter(item => item !== id)
     } else {
         img.classList.add("selected")
         selectedCount++
-        selectedItems.push(id)
+        selectedPll.push(id)
     }
 
-    localStorage.setItem('selectedItems', JSON.stringify(selectedItems))
-    SelectSpan.textContent = selectedCount + " out 57"
+    localStorage.setItem('selectedPll', JSON.stringify(selectedPll))
+    SelectSpan.textContent = selectedCount + " out 21"
 }
 
 function selectGroup(id) {
-    const imgs = document.querySelectorAll(`img[src^="../olls_svg/${id}/${id}_"]`)
+    const imgs = document.querySelectorAll(`img[src^="../plls_svg/${id}/"]`)    
     const allSelected = Array.from(imgs).every(img => img.classList.contains("selected"))
-    let selectedItems = JSON.parse(localStorage.getItem('selectedItems')) || []
+    let selectedPll = JSON.parse(localStorage.getItem('selectedPll')) || []
 
     if (allSelected) {
         imgs.forEach(img => {
@@ -47,7 +47,7 @@ function selectGroup(id) {
                 img.classList.remove("selected")
                 selectedCount--
                 const imgId = img.src.split('/').pop().replace('.svg', '')
-                selectedItems = selectedItems.filter(item => item !== imgId)
+                selectedPll = selectedPll.filter(item => item !== imgId)
             }
         })
     } else {
@@ -56,20 +56,21 @@ function selectGroup(id) {
                 img.classList.add("selected")
                 selectedCount++
                 const imgId = img.src.split('/').pop().replace('.svg', '')
-                if (!selectedItems.includes(imgId)) {
-                    selectedItems.push(imgId)
+                if (!selectedPll.includes(imgId)) {
+                    selectedPll.push(imgId)
                 }
             }
         })
     }
 
-    localStorage.setItem('selectedItems', JSON.stringify(selectedItems))
-    SelectSpan.textContent = selectedCount + " out 57"
+    localStorage.setItem('selectedPll', JSON.stringify(selectedPll))
+    SelectSpan.textContent = selectedCount + " out 21"
 }
+
 function selectAll() {
     const imgs = document.querySelectorAll(`img[src$=".svg"]`)
     const allSelected = Array.from(imgs).every(img => img.classList.contains("selected"))
-    let selectedItems = JSON.parse(localStorage.getItem('selectedItems')) || []
+    let selectedPll = JSON.parse(localStorage.getItem('selectedPll')) || []
 
     if (allSelected) {
         imgs.forEach(img => {
@@ -78,9 +79,9 @@ function selectAll() {
             }
         })
 
-        selectedItems = []
+        selectedPll = []
         selectedCount = 0
-        SelectSpan.textContent = "0 out 57"
+        SelectSpan.textContent = "0 out 21"
     } else {
         imgs.forEach(img => {
             if (!img.classList.contains("selected")) {
@@ -88,15 +89,15 @@ function selectAll() {
             }
         })
 
-        selectedItems = Array.from(imgs).map(img => {
+        selectedPll = Array.from(imgs).map(img => {
             return img.src.split('/').pop().replace('.svg', '')
         })
 
         selectedCount = imgs.length
-        SelectSpan.textContent = `${selectedCount} out 57`
+        SelectSpan.textContent = `${selectedCount} out 21`
     }
 
-    localStorage.setItem('selectedItems', JSON.stringify(selectedItems))
+    localStorage.setItem('selectedPll', JSON.stringify(selectedPll))
 }
 
 function showNotifier(message) {
@@ -134,10 +135,10 @@ const timer = document.getElementById("timer")
 
 function switch_page() {
     if (selectedCount == 0) {
-        showNotifier("Select an OLL!")
+        showNotifier("Select an PLL!")
     } else {
-        let allowed = JSON.parse(localStorage.getItem('selectedItems')) || []
-        let scramble = randomOll(allowed)
+        let allowed = JSON.parse(localStorage.getItem('selectedPll')) || []
+        let scramble = randomPll(allowed)
         document.getElementsByClassName("scramblespan")[0].textContent = "Scramble:\n" + scramble.sequence 
 
         mainoll.style.display = "none",
@@ -152,4 +153,4 @@ function revert_page() {
     document.getElementsByClassName("maintimer")[0].style.display = "none"
 }
 
-let selector = randomOll
+let selectordata = randomPll

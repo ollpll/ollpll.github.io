@@ -150,7 +150,8 @@ img, img svg {
 }
 
 .Dot, .Cross, .Lightning-Bolt, .P-Shape, .L-Shape, .Akward-Shape, .Knight-Shape, 
-.Line, .Fish, .Square, .T-Shape, .C-Shape, .Stair, .OC {
+.Line, .Fish, .Square, .T-Shape, .C-Shape, .Stair, .OC,
+.Acs, .Dcs, .Eo {
     margin-bottom: 30px;
     width: 100%;
     max-width: 800px;
@@ -176,6 +177,38 @@ img, img svg {
 
 .casespan:hover, .centeredspan:hover {
     transform: translateY(-2px);
+    transition: 0.25s;
+}
+
+.case-cont {
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+    top: 10px;
+}
+
+.case-cont .spancase {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: rgb(200,200,200);
+    z-index: 10;
+    cursor: pointer;
+    transition: 0.25s;
+    -webkit-user-select: none;     
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.case-cont .spancase:hover {
+    transform: translateX(-50%) translateY(-2px);
     transition: 0.25s;
 }
 
@@ -228,6 +261,41 @@ img, img svg {
     background-color: rgb(100,100,100);
     color: rgb(200,200,200);
     border-radius: 5px;
+}
+
+.timerarrange {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.timerarrange {
+    display: flex;
+    flex-direction: row;
+}
+
+.timerarrange {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    padding: 10px;
+}
+
+.timerarrange div {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.timerarrange svg:hover {
+    transform: translateY(-4px);
+    transition: 0.5s;
 }
 
 .time {
