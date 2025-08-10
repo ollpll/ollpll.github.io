@@ -6,10 +6,6 @@ OLL trainer i might add more tools soon but big credits to speedcubedb for the s
 
 Changelog:
 
-Release:
-  
-  oll training tool
+Release: ```oll training tool```
 
-First update: 
-  
-  Added pll training tool too
+First update: ```Added pll training tool too```
